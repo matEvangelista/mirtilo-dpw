@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(39, 6, 69);
+}
+
+/*HEADER E NAV*/
+header {
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(39, 6, 69);
+    position: fixed;
+    box-shadow: 0 0 5px rgb(19, 1, 35);
+    z-index: 1;
+}
+
+.nav {
+    align-content: flex-end;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(61, 15, 103);
+}
+
+#home {
+    opacity: 0.8;
+}
+
+#home:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#home:not(:hover) {
+    transition: 0.3s;
+}
+
+.btn {
+    align-content: flex-end;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    background-color: blueviolet;
+    font-size: 1.2rem;
+}
+
+.nav:hover {
+    background-color: blueviolet;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(39, 6, 69);
+    transition: 0.3s;
+}
+
+.nav:not(:hover),
+.btn:not(:hover) {
+    transition: 0.3s ease-in-out;
+}
+
+.nav:active,
+.btn:active {
+    background-color: rgb(196, 52, 253);
+}
+
+#pagina-atual {
+    background-color: blueviolet;
+}
+
+/*PÁGINA INICIAL*/
+
+/*HERO*/
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero h1:hover {
+    color: rgb(200, 93, 243);
+    transition: 0.5s;
+}
+
+.hero h1:not(:hover) {
+    transition: 0.2s;
+}
+
+.hero h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero hr {
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: white;
+}
+
+/*SOBRE*/
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 300px;
+    color: rgb(39, 6, 69);
+}
+
+.sobre h2,
+.sobre-receitas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+
+.sobre-receitas img {
+    border-radius: 10px;
+}
+
+.sobre i,
+.sobre-receitas i {
+    font-size: 2rem;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.sobre p,
+.sobre-receitas p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.sobre hr,
+.sobre-receitas hr {
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: rgb(39, 6, 69);
+}
+
+.sobre-receitas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    padding: 0px 150px;
+    padding-bottom: 100px;
+    color: rgb(39, 6, 69);
+}
+
+.index-receitas {
+    margin: 0px 30px;
+    margin-top: 15px;
+}
+
+.index-receitas:hover {
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+
+.index-receitas:not(:hover) {
+    transition: .2s ease-in-out;
+}
+
+.receitas-home {
+    display: flex;
+}
+
+.receitas-home span {
+    margin: 15px 20px;
+}
+
+
+/*FOOTER*/
+footer {
+    display: flex;
+    background-color: rgb(39, 6, 69);
+    color: white;
+    justify-content: space-between;
+    padding: 25px 50px;
+    margin-top: 70px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: rgb(196, 52, 253);
+    transition: 0.5s;
+}
+
+footer a:not(:hover) {
+    transition: 0.5s;
+}
+
+footer .footer-esquerda {
+    padding-top: 10px;
+}
+
+footer .footer-direita {
+    padding-top: 10px;
+}
+
+footer .footer-centro {
+    font-size: 2.8rem;
+    padding-top: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+
+/*HISTÓRIA*/
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero hr {
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: white;
+}
+
+
+.hero-historia {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero-historia.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-historia h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-historia h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero-historia hr {
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: white;
+}
+
+.historia-curiosidades li {
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    color: rgb(39, 6, 69)
+}
+
+.historia-curiosidades li a:hover {
+    color: rgb(196, 52, 253);
+    transition: 0.2s;
+}
+
+.historia-curiosidades li a:not(:hover) {
+    transition: .2s;
+}
+
+.historia-curiosidades {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 200px;
+    padding-bottom: 0px;
+    text-align: center;
+    color: rgb(39, 6, 69)
+}
+
+.historia-curiosidades h2 {
+    font-size: 2.5rem;
+}
+
+
+.historia-curiosidades-sec-1 {
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    padding-top: 30px;
+    gap: 150px;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.historia-curiosidades hr {
+    margin-top: 15px;
+    align-self: center;
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: rgb(39, 6, 69);
+}
+
+.historia-curiosidades i {
+    padding: 0 30px;
+    font-size: 2rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.historia-curiosidades img {
+    border-radius: 15px;
+}
+
+.historia-curiosidades table {
+    border-collapse: collapse;
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+.historia-curiosidades table th,
+td {
+    border: 2px solid rgb(39, 6, 69);
+    padding: 5px;
+}
+
+#index {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+
+/*#### CURIOSIDADES #####*/
+
+/*HERO*/
+
+.hero-curiosidades {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero-curiosidades.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-curiosidades h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-curiosidades h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero-curiosidades hr {
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: white;
+}
+
+/*####### RECEITAS ###########*/
+/*HERO*/
+
+.hero-receitas {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero-receitas.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-receitas h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-receitas h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero-receitas hr {
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: white;
+}
+
+/*Lista de receitas*/
+
+.receitas {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 200px;
+    padding-bottom: 0px;
+    align-items: center;
+    color: rgb(39, 6, 69);
+}
+
+.receitas img {
+    border-radius: 10px;
+}
+
+.receitas h2 {
+    font-size: 2.5rem;
+}
+
+.receitas i {
+    font-size: 2rem;
+    padding-top: 30px;
+}
+
+.receitas hr {
+    margin-top: 15px;
+    align-self: center;
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: rgb(39, 6, 69);
+    z-index: -1;
+}
+
+.receitas a:hover {
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+
+.receitas a:not(:hover) {
+    transition: .2s ease-in-out;
+}
+
+
+.receita {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    font-size: 1.2rem;
+    gap: 30px;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/*PÁGINA INDIVIDUAL DE RECEITAS*/
+
+.intrucoes {
+    padding: 130px 200px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(39, 6, 69);
+    padding-bottom: 0;
+}
+
+#pagina-atual-receitas {
+    background-color: rgb(122, 40, 198);
+}
+
+#pagina-atual-receitas:hover {
+    background-color: blueviolet;
+}
+
+.intrucoes h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.intrucoes ul,
+ol {
+    margin-bottom: 20px;
+}
+
+.intrucoes li {
+    font-size: 1.1rem;
+}
+
+.ingredientes-detalhes {
+    display: flex;
+    gap: 150px;
+}
+
+.receita-titulo-subtitulo {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.receita-titulo-subtitulo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.receita-titulo-subtitulo p {
+    font-size: 1.4rem;
+}
+
+/* ######## QUIZ ##########*/
+.hero-quiz {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero-quiz.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-quiz h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-quiz h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+}
+
+.hero-quiz hr {
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: white;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 200px;
+    padding-bottom: 0px;
+    align-items: center;
+    color: rgb(39, 6, 69);
+}
+
+
+.quiz h2 {
+    font-size: 2.5rem;
+}
+
+.quiz i {
+    font-size: 2rem;
+    padding-top: 30px;
+}
+
+.quiz h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.quiz hr {
+    margin-top: 15px;
+    align-self: center;
+    width: 200px;
+    height: 3px;
+    border: none;
+    background-color: rgb(39, 6, 69);
+    z-index: -1;
+}
+
+.quiz form {
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+#botao {
+    align-self: center;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    margin-bottom: 10px;
+    background-color: rgb(196, 52, 253);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*MUDAR O ÍCONE DO MENU ATIVO NA HORA DE FAZER O TRABALHO*/

@@ -19,20 +19,34 @@
 <body>
 
     <header class="inicio">
-        <a href="index.html" id="home"><img src="img/logo.png" height=50 alt="logo"></a>
-        <nav>
-            <a href="historia.html"><span class="nav">História</span></a>
-            <a href="receitas.html"><span class="nav" id="pagina-atual">Receitas</span></a>
-            <a href="curiosidades.html"><span class="nav">Curiosidades</span></a>
-            <a href="quiz.html"><span class="nav">Quiz</span></a>
-        </nav>
+        <div class="outer">
+            <a href="index.html" id="home"><img src="img/logo.png" height=50 alt="logo"></a>
+            <nav>
+                <a href="historia.html"><span class="botoes-nav">História</span></a>
+                <a href="receitas.html"><span class="botoes-nav" id="atual">Receitas</span></a>
+                <a href="curiosidades.html"><span class="botoes-nav">Curiosidades</span></a>
+                <a href="quiz.html"><span class="botoes-nav">Quiz</span></a>
+                <a href="jogo.html"><span class="botoes-nav">Jogo</span></a>
+            </nav>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div id="clicou">
+            <a href="historia.html"><span class="botoes-nav-cel">História</span></a>
+            <a href="receitas.html"><span class="botoes-nav-cel">Receitas</span></a>
+            <a href="curiosidades.html"><span class="botoes-nav-cel">Curiosidades</span></a>
+            <a href="quiz.html"><span class="botoes-nav-cel">Quiz</span></a>
+            <a href="jogo.html"><span class="botoes-nav">Jogo</span></a>
+        </div>
+
     </header>
 
-    <section class="hero-receitas">
+    <main class="hero-receitas">
         <h1>Receitas</h1>
         <h3>Escolha a que mais lhe apetece</h3>
         <hr>
-    </section>
+    </main>
 
     <section class="receitas">
         <h2>Bebidas</h2>
@@ -104,6 +118,8 @@
             <a href="mailto:mateus.e.alcantara@edu.unirio.br">Entre em contato conosco.</a>
         </div>
     </footer>
+
+    <script src="main.js"></script>
 
 </body>
 

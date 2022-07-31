@@ -19,37 +19,54 @@
 <body>
 
     <header class="inicio">
-        <a href="index.html" id="home"><img src="img/logo.png" height=50 alt="logo"></a>
-        <nav>
-            <a href="historia.html"><span class="nav">História</span></a>
-            <a href="receitas.html"><span class="nav">Receitas</span></a>
-            <a href="curiosidades.html"><span class="nav" id="pagina-atual">Curiosidades</span></a>
-            <a href="quiz.html"><span class="nav">Quiz</span></a>
-        </nav>
+        <div class="outer">
+            <a href="index.html" id="home"><img src="img/logo.png" height=50 alt="logo"></a>
+            <nav>
+                <a href="historia.html"><span class="botoes-nav">História</span></a>
+                <a href="receitas.html"><span class="botoes-nav">Receitas</span></a>
+                <a href="curiosidades.html"><span class="botoes-nav" id="atual">Curiosidades</span></a>
+                <a href="quiz.html"><span class="botoes-nav">Quiz</span></a>
+                <a href="jogo.html"><span class="botoes-nav">Jogo</span></a>
+            </nav>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div id="clicou">
+            <a href="historia.html"><span class="botoes-nav-cel">História</span></a>
+            <a href="receitas.html"><span class="botoes-nav-cel">Receitas</span></a>
+            <a href="curiosidades.html"><span class="botoes-nav-cel">Curiosidades</span></a>
+            <a href="quiz.html"><span class="botoes-nav-cel">Quiz</span></a>
+            <a href="jogo.html"><span class="botoes-nav-cel">Jogo</span></a>
+        </div>
+
     </header>
 
-    <section class="hero-curiosidades">
+    <main class="hero-curiosidades">
         <h1>Curiosidades</h1>
         <h3>Que tal saber mais sobre o mirtilo?</h3>
         <hr>
-    </section>
+    </main>
 
     <section class="historia-curiosidades">
         <h2>Bom para o coração</h2>
         <hr>
         <i class="fa-solid fa-heart-circle-check"></i>
 
-        <span class="historia-curiosidades-sec-1">
-            Você sabia que o mirtilo foi certificada como uma fruta boa para o coração pela AHA
-            (American Heart Association)? Um estudo conduzido pela University of East Anglia
-            constatou que consumir 26g (aproximadamente um copo americano) da fruta por dia resulta
-            em uma melhora significativa em marcadores de saúde do coração, como função vascular.<br><br>
-            Além disso, o consumo regular da fruta melhora a função endotelial e reduz a rigidez arterial,
-            diminuindo, assim, o risco de parada e ataque cardíacos. O consumo de um copo de mirtilo por
-            dia também causa um leve aumento de HDL, o colesterol bom, responsável pela produção hormonal.
+        <div class="historia-curiosidades-sec-1 inverte">
+            <p>
+                Você sabia que o mirtilo foi certificada como uma fruta boa para o coração pela AHA
+                (American Heart Association)? Um estudo conduzido pela University of East Anglia
+                constatou que consumir 26g (aproximadamente um copo americano) da fruta por dia resulta
+                em uma melhora significativa em marcadores de saúde do coração, como função vascular.<br><br>
+                Além disso, o consumo regular da fruta melhora a função endotelial e reduz a rigidez arterial,
+                diminuindo, assim, o risco de parada e ataque cardíacos. O consumo de um copo de mirtilo por
+                dia também causa um leve aumento de HDL, o colesterol bom, responsável pela produção hormonal.
+            </p>
 
-            <img src="img/aha-logo.jpg" width=200 alt="aha">
-        </span>
+            <img id="aha" src="img/aha-logo.jpg" width=200 alt="aha" onmouseover="mudaImgAHA()"
+                onmouseleave="retornaImgAHA()">
+        </div>
 
     </section>
 
@@ -57,37 +74,40 @@
         <h2>Humor e Memória</h2>
         <hr>
         <i class="fa-solid fa-brain"></i>
-        <span class="historia-curiosidades-sec-1">
-            <img src="img/cerebro.jpg" alt="cerebro" width=300>
+        <div class="historia-curiosidades-sec-1">
+            <img id="cerebro" src="img/cerebro.jpg" alt="cerebro" width=300 onmouseover="mudaImgCerebro()"
+                onmouseleave="retornaImgCerebro()">
 
-            Mirtilos são ricos em polifenóis que podem ser benéficos à performance cognitiva e ao humor.
-            Estudos demostram que o consumo ou a suplementação da fruta em várias doses e intervalos de
-            tempo distintos melhoram performance cognitiva e mémoria de curto e longo prazos. Melhoras
-            de humor também são destacadas por alguns estudos, porém não há consenso sobre este tema.
+            <p>
+                Mirtilos são ricos em polifenóis que podem ser benéficos à performance cognitiva e ao humor.
+                Estudos demostram que o consumo ou a suplementação da fruta em várias doses e intervalos de
+                tempo distintos melhoram performance cognitiva e mémoria de curto e longo prazos. Melhoras
+                de humor também são destacadas por alguns estudos, porém não há consenso sobre este tema.
+            </p>
 
-
-        </span>
+        </div>
     </section>
 
     <section class="historia-curiosidades">
         <h2>Controle de diabetes</h2>
         <hr>
         <i class="fa-solid fa-utensils"></i>
-        <span class="historia-curiosidades-sec-1">
-            
-                De acordo com o Center for Disease Control and Prevention, mais de 10% da população adulta
+        <div class="historia-curiosidades-sec-1 inverte">
+
+            <p>De acordo com o Center for Disease Control and Prevention, mais de 10% da população adulta
                 americana tem diabetes, uma doença que afeta a produção de insulina, substância necessária
                 para que a glicose entre nas células. A American Diabetes Association afirma que o mirtilo
                 pode facilmente fazer parte da dieta de um diabético, já que a fruta, apesar de muito doce,
                 possui pouco açúcar.<br><br>
                 Há evidência científica comprovando a eficácia da fruta no combate à diabetes, reduzindo
-                a hemoglobina AC1 (nível médio de açúcar no sangue), já que é uma boa fonte de fibras.
-            
-            <img src="img/diabetes.jpeg" alt="diabetes" width=350>
-        </span>
+                a hemoglobina AC1 (nível médio de açúcar no sangue), já que é uma boa fonte de fibras.</p>
+
+            <img id="diabetes" src="img/diabetes.jpeg" alt="diabetes" width=350 onmouseover="mudaImgDiabetes()"
+                onmouseleave="retornaImgDiabetes()">
+        </div>
     </section>
 
-    <section class="historia-curiosidades">
+    <section class=" historia-curiosidades">
         <h2>Informações nutricionais</h2>
         <hr>
         <i class="fa-brands fa-nutritionix"></i>
@@ -153,6 +173,8 @@
             <a href="mailto:mateus.e.alcantara@edu.unirio.br">Entre em contato conosco.</a>
         </div>
     </footer>
+
+    <script src="main.js"></script>
 
 
 </body>

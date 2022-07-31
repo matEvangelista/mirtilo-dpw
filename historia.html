@@ -19,43 +19,99 @@
 <body>
 
     <header class="inicio">
-        <a href="index.html" id="home"><img src="img/logo.png" height=50 alt="logo"></a>
-        <nav>
-            <a href="historia.html"><span class="nav" id="pagina-atual">História</span></a>
-            <a href="receitas.html"><span class="nav">Receitas</span></a>
-            <a href="curiosidades.html"><span class="nav">Curiosidades</span></a>
-            <a href="quiz.html"><span class="nav">Quiz</span></a>
-        </nav>
+        <div class="outer">
+            <a href="index.html" id="home"><img src="img/logo.png" height=50 alt="logo"></a>
+            <nav>
+                <a href="historia.html"><span class="botoes-nav" id="atual">História</span></a>
+                <a href="receitas.html"><span class="botoes-nav">Receitas</span></a>
+                <a href="curiosidades.html"><span class="botoes-nav">Curiosidades</span></a>
+                <a href="quiz.html"><span class="botoes-nav">Quiz</span></a>
+                <a href="jogo.html"><span class="botoes-nav">Jogo</span></a>
+            </nav>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div id="clicou">
+            <a href="historia.html"><span class="botoes-nav-cel">História</span></a>
+            <a href="receitas.html"><span class="botoes-nav-cel">Receitas</span></a>
+            <a href="curiosidades.html"><span class="botoes-nav-cel">Curiosidades</span></a>
+            <a href="quiz.html"><span class="botoes-nav-cel">Quiz</span></a>
+            <a href="jogo.html"><span class="botoes-nav-cel">Jogo</span></a>
+        </div>
+
     </header>
 
-    <section class="hero-historia">
+    <main class="hero-historia">
         <h1>História</h1>
         <h3>Que história carrega esta incrível fruta? Descubra-a aqui.</h3>
         <hr>
-    </section>
+    </main>
 
-    <section class="historia-curiosidades">
+    <div style="margin-top: 30px;">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/carrossel1.jpg" style="width:100%" alt="Povos Originários">
+                <div class="text">Povos orginários da América do Norte</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/carrossel2.jpg" style="width:100%" alt="Campo de mirtilo">
+                <div class="text">Campo de mirtilo</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/carrossel3.jpg" style="width:100%" alt="Mirtilos">
+                <div class="text">Mirtilos de perto</div>
+            </div>
+
+            <a class="prev" onclick="somaSlides(-1)">&#10094;</a>
+            <a class="next" onclick="somaSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="slideAtual(1)"></span>
+            <span class="dot" onclick="slideAtual(2)"></span>
+            <span class="dot" onclick="slideAtual(3)"></span>
+        </div>
+    </div>
+
+    <section class="historia-curiosidades" id="indice">
         <h2>Índice</h2>
         <hr>
         <i class="fa-solid fa-table-list"></i>
         <div id="index">
-            <img src="img/miritilo-index.png" width=200 alt="mirtilos">
+            <img class="img-mirtilo" src="img/miritilo-index.png" width=200 alt="mirtilos">
             <ol>
                 <li><a href="#origem">Origem e cultivo</a></li>
                 <li><a href="#cultivo">Uma breve história da produção em masssa</a></li>
                 <li><a href="#boom">O boom do mirtilo</a></li>
                 <li><a href="#brasil">Mirtilo no Brasil</a></li>
             </ol>
-            <img src="img/miritilo-index.png" width=200 alt="mirtilos">
+            <img class="img-mirtilo" src="img/miritilo-index.png" width=200 alt="mirtilos">
         </div>
 
+    </section>
+
+    <section class="historia-curiosidades" id="brasil"
+        style="background-color: green; color: yellow; display: none; padding: 10px;">
+        <h2>Hoje é dia da independência do Brasil!</h2>
+        <i class="fa-solid fa-cake-candles"></i>
+        <div class="historia-curiosidades-sec-1">
+            <p>O que mirtilo e a independência do Brasil têm em comum? Nada, mas você pode comemorá-la fazendo nosso
+                bolo de mirtilo!</p>
+            <img src="img/independencia.jpg" width=200 alt="Grito do Ipiranga" style="margin-bottom: 10px;">
+        </div>
     </section>
 
     <section class="historia-curiosidades" id="origem">
         <h2>Origem e cultivo</h2>
         <hr>
         <i class="fa-brands fa-canadian-maple-leaf"></i>
-        <div class="historia-curiosidades-sec-1">
+        <div class="historia-curiosidades-sec-1 inverte">
             <p>
                 Mirtilo, também conhecido como Blueberry, é uma planta arbustiva do gênero <span
                     style="font-style:italic">Vaccnium</span>, nativa da
@@ -82,10 +138,12 @@
                 ambas frutas.<br><br>
                 Após ler o trabalho de Frederick Coville, um botânico do Departamento de Agricultura dos EUA, White
                 contratou-o
-                para auxiliá-la na produção de mirtilo.
+                para auxiliá-la na produção de mirtilo.<br><br>
+                White, se estivesse viva, teria <span class="aniversario"></span> dias de vida! Muitos mirtilo para
+                comer.
             </p>
         </div>
-        <div class="historia-curiosidades-sec-1">
+        <div class="historia-curiosidades-sec-1 inverte" style="margin-top: 50px;">
             <p>
                 Após ser contratado por White, Frederick Coville encarregou-se de lidar com o conhecimento científico
                 para o
@@ -98,7 +156,9 @@
                 satisfizeram
                 os requisitos determinados pela dupla.<br><br>
                 Finalmente, em 1916, White e Coville vendem sua primeira colheita de mirtilo, com o nome de
-                Tru-Blu-Berries.
+                Tru-Blu-Berries.<br><br>
+                White, de estivesse vivo, teria <span class="aniversario"></span> dias de vida! Seria mais rico do que
+                o Ellon Musk com tantos mirtilos vendidos, não?
             </p>
             <img src="img/frederick-coville.jpg" width=300 alt="Frederick Coville">
         </div>
@@ -109,7 +169,7 @@
         <hr>
         <i class="fa-solid fa-money-bill-wheat"></i>
         <div class="historia-curiosidades-sec-1">
-            <img src="img/factory.png" width=400 alt="fábrica">
+            <img src="img/factory.png" width=300 alt="fábrica" id="fabrica">
             <p>
                 Entre as décadas de 1940 e 1960, mais de 200 mil sementes de mirtilo foram distribuídas entre 13 estados
                 dos EUA. O primeiro livro de receitas, Blueberry Hill Cookbook, foi lançado em 1959 e, desde então, tem
@@ -123,12 +183,12 @@
         </div>
     </section>
 
-    <section class="historia-curiosidades" id="brasil">
+    <section class="historia-curiosidades" id="brasil-producao">
         <h2>Mirtilo no Brasil</h2>
         <hr>
-            <i class="fa-solid fa-brazilian-real-sign"></i>
+        <i class="fa-solid fa-brazilian-real-sign"></i>
 
-        <div class="historia-curiosidades-sec-1">
+        <div class="historia-curiosidades-sec-1 inverte">
             <p>Em 1984, a Embrapa, Empresa Brasileira de Pesquisa Agropecuária, introduziu o mirtilo no sul do Brasil,
                 devido ao clima semelhante ao norte-americano. Atualmente, a maior parte da produção dá-se no Rio Grande
                 do Sul e Santa Catarina.<br><br>
@@ -159,6 +219,8 @@
             <a href="mailto:mateus.e.alcantara@edu.unirio.br">Entre em contato conosco.</a>
         </div>
     </footer>
+
+    <script src="main.js"></script>
 
 
 </body>

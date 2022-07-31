@@ -19,21 +19,34 @@
 <body>
 
     <header class="inicio">
-        <a href="index.html" id="home"><img src="img/logo.png" height=50 alt="logo"></a>
-        <nav>
-            <a href="historia.html"><span class="nav">História</span></a>
-            <a href="receitas.html"><span class="nav">Receitas</span></a>
-            <a href="curiosidades.html"><span class="nav">Curiosidades</span></a>
-            <a href="quiz.html"><span class="nav">Quiz</span></a>
-        </nav>
+        <div class="outer">
+            <a href="index.html" id="home"><img src="img/logo.png" height=50 alt="logo"></a>
+            <nav>
+                <a href="historia.html"><span class="botoes-nav">História</span></a>
+                <a href="receitas.html"><span class="botoes-nav">Receitas</span></a>
+                <a href="curiosidades.html"><span class="botoes-nav">Curiosidades</span></a>
+                <a href="quiz.html"><span class="botoes-nav">Quiz</span></a>
+                <a href="jogo.html"><span class="botoes-nav">Jogo</span></a>
+            </nav>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+        </div>
+        <div id="clicou">
+            <a href="historia.html"><span class="botoes-nav-cel">História</span></a>
+            <a href="receitas.html"><span class="botoes-nav-cel">Receitas</span></a>
+            <a href="curiosidades.html"><span class="botoes-nav-cel">Curiosidades</span></a>
+            <a href="quiz.html"><span class="botoes-nav-cel">Quiz</span></a>
+            <a href="jogo.html"><span class="botoes-nav-cel">Jogo</span></a>
+        </div>
+
     </header>
 
-
-    <section class="hero">
+    <main class="hero">
         <h1>Mirtilo</h1>
         <h3>Colorido, delicioso e nutritivo.</h3>
         <hr>
-    </section>
+    </main>
 
     <section class="sobre">
         <h2>Por que mirtilo?</h2>
@@ -58,11 +71,24 @@
         <p>Após acessar as seções História e Curiosidades, que tal fazer o nosso quiz? É rápido, super divertido e
             cativante.
         </p>
-        <span style="margin-top: 20px;">
+        <span style="margin-top: 20px;" id="botoes-inicial">
             <a href="historia.html"><span class="btn">História</span></a>
             <a href="curiosidades.html"><span class="btn">Curiosidades</span></a>
             <a href="quiz.html"><span class="btn">Quiz</span></a>
         </span>
+    </section>
+
+    <section class="sobre" style="padding-top: 0;">
+        <h2>Há easter eggs neste site</h2>
+        <span>
+            <i class="fa-solid fa-egg"></i>
+            <i class="fa-solid fa-asterisk"></i>
+            <i class="fa-solid fa-eye"></i>
+        </span>
+        <p>Incentiva-se o usuário a passar o mouse por múltiplas frases para revelar coisas ocultas.</p>
+        <div class="tooltip" id="tooltip-index">Este é um exemplo
+            <span class="tooltiptext">Acesse a seção de curiosidades no dia da independência!</span>
+        </div>
     </section>
 
     <section class="sobre-receitas" style="padding-bottom: 0;">
@@ -95,6 +121,8 @@
         </div>
     </section>
 
+    <div class="sobre" id="calendario"></div>
+
     <footer>
         <div class="footer-esquerda">
             <b>Sites úteis</b>
@@ -115,6 +143,8 @@
             <a href="mailto:mateus.e.alcantara@edu.unirio.br">Entre em contato conosco.</a>
         </div>
     </footer>
+
+    <script src="main.js"></script>
 
 </body>
 
